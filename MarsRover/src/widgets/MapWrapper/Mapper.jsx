@@ -3,7 +3,7 @@ import ImageMapper from 'react-img-mapper';
 import { MapSize } from '../../config/config';
 
 
-export const MapWrapper = props => {
+export const Mapper = props => {
     const URL = '/PIA24096.jpeg';
 
     const MAP = {
