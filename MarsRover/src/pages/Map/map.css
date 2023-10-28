@@ -1,0 +1,11 @@
+/* Мне надо закрепить картинку на заднем фоне так, чтобы ее можно было скролить и поверх нее накладывать другие компоненты, кратинка лежит в publick/PIA24096.jpeg */
+
+.MapWrapper {
+  background-image: url(PIA24096.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
