@@ -48,6 +48,7 @@
 }
 
 .modal-button {
+  cursor: pointer;
   margin-left: 40px;
   background: none;
   border: none;
@@ -56,4 +57,9 @@
 .modal-button img {
   width: 2rem;
   height: auto;
+  transition: .3s;
+}
+
+.modal-button img:hover {
+  transform: scale(1.1);
 }

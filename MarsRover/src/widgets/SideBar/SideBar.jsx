@@ -39,8 +39,10 @@ const SideBar = ({ rover, setRover }) => {
                 >
                     <form>
                         <input type="text" placeholder="Name" />
-                        <input type="text" placeholder="Info" />
-                        <button type="submit">Send</button>
+                        <input type="text" placeholder="Maneuverability" />
+                        <input type="text" placeholder="Speed" />
+                        {/* <input type="text" placeholder="Fuel" /> */}
+                        <button className="submit" type="submit">Send</button>
                     </form>
                 </Modal>
             )}
