@@ -1,0 +1,17 @@
+.background {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+}
+
+.text-overlay {
+    max-width: 700px;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
