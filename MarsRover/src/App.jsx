@@ -5,6 +5,7 @@ import MainPage from './pages/MainPage/MainPage';
 import { Map } from './pages/Map/Map';
 import Control from './pages/RoverControl/Control';
 import Navbar from './shared/Navbar/Navbar';
+import { Footer } from './pages/MainPage/Footer/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/footer" element={<Footer />} />
         <Route path="/control" element={<Control />} />
         <Route path="/map" element={<Map />} />
       </Routes>
