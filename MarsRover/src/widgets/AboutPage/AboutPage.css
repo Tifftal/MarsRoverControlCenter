@@ -10,7 +10,7 @@
     left: 5vw;
     border-radius: 501px;
     /* background-color: red; */
-    background-image: url(../../../img/back.jpg);
+    background-image: url(../../img/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -42,7 +42,6 @@ path:hover .drop-down {
 
 .text-overlay {
     position: absolute;
-    top: -5vh;
     left: 600px;
     display: flex;
     justify-content: flex-end;
