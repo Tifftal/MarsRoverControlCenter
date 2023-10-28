@@ -1,0 +1,37 @@
+/* .background {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+} */
+
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: url(../../../img/marsBackgroundBlack.jpg);
+}
+
+.text-overlay {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 5%;
+}
+
+.text-info {
+    width: 35rem;
+    background-color: rgba(28, 28, 28, 0.5);
+    padding: 1% 2%;
+    border-radius: 10px;
+}
+
+.text-info h1 {
+    font-size: 150%;
+    margin-bottom: 2%;
+    font-weight: 800;
+}
