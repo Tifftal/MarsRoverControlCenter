@@ -8,6 +8,13 @@ export const useMap = () => {
         const squareSize = 100;
         const areas = [];
 
+        existingPoints.forEach((point) => {
+            areas.push({
+                ...point
+            });
+        });
+
+        
         for (let x = 0; x < MapSize.width; x += squareSize) {
             for (let y = 0; y < MapSize.height; y += squareSize) {
                 areas.push({
@@ -17,13 +24,8 @@ export const useMap = () => {
             }
         }
 
-        existingPoints.forEach((point) => {
-            areas.push({
-                shape: 'circle',
-                coords: [point.x, point.y, point.radius],
-                
-            });
-        });
+
+        console.log(areas);
 
         return areas;
     }
