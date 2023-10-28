@@ -17,7 +17,6 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/map" element={<Map />} />
-        <Route path="/footer" element={<Footer />} />
         <Route path="/control" element={<Control />} />
       </Routes>
     </BrowserRouter>
