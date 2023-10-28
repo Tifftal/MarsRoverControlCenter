@@ -1,4 +1,4 @@
-export const MapWrapper = () => {
+export const MapWrapper = (props) => {
     return (
         <div
             className="ImagemapperContainer"
@@ -7,7 +7,7 @@ export const MapWrapper = () => {
                 overflow: "auto",
             }}
         >
-
+            {props.children}
         </div>
     )
 }
