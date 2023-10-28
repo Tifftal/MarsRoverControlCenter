@@ -1,0 +1,30 @@
+.navbar{
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    padding: 1% 5%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar h1 {
+    color: rgb(252, 208, 152);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 120%;
+    font-weight: 500;
+    padding: 0.3% 1%;
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}

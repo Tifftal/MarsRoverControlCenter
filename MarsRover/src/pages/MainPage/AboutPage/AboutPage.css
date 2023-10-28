@@ -8,11 +8,13 @@
 .container {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 85vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
     background-image: url(../../../img/marsBackgroundBlack.jpg);
+    margin-top: 15vh;
+
 }
 
 .text-overlay {
