@@ -1,6 +1,6 @@
 import "./SideTab.css";
 
-export const SideTab = ({ children, header, side }) => {
+export const SideTab = ({ children, header, side, open, setIsOpen, setIsClose }) => {
     return (
         <div
             style={{
@@ -17,10 +17,18 @@ export const SideTab = ({ children, header, side }) => {
         >
             <div className="markersTabHeader">
                 <h3>{header}</h3>
+                <button
+                    onClick={open ? setIsClose : setIsOpen}
+                >
+                    {open ? ("Свернуть") : ("Развернуть")}
+                </button>
             </div>
-            <div className="markersTabBody">
-                {children}
-            </div>
+            {!open ? null : (
+                <div className="markersTabBody">
+                    {children}
+                </div>
+            )
+            }
         </div>
     )
 }
