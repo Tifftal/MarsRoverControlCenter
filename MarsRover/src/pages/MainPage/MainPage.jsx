@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './MainPage.css'
+import Welcome from './Welcome/Welcome'
 
 const MainPage = () => {
     return (
         <div className='main'>
-            <h1>Mars Rover</h1>
+            <Welcome />
         </div>
     )
 }
