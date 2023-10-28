@@ -40,6 +40,7 @@ const SideBar = ({ rover, setRover }) => {
                     <form>
                         <input type="text" placeholder="Name" />
                         <input type="text" placeholder="Info" />
+                        <button type="submit">Send</button>
                     </form>
                 </Modal>
             )}

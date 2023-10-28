@@ -49,4 +49,11 @@
 
 .modal-button {
   margin-left: 40px;
+  background: none;
+  border: none;
+}
+
+.modal-button img {
+  width: 2rem;
+  height: auto;
 }
