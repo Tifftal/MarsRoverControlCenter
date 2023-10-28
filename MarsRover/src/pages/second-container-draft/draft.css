@@ -1,0 +1,28 @@
+div {
+    position: absolute;
+    width: 312px;
+    height: 312px;
+    background: #903C30;
+    border-radius: 99999px;
+}
+
+svg {
+    position: absolute;
+}
+
+.first {
+    top: 183px;
+    left: 123px;
+}
+
+.second {
+    top: 113px;
+}
+
+.third {
+    left: 55px;
+}
+
+path:hover {
+    fill: red;
+}

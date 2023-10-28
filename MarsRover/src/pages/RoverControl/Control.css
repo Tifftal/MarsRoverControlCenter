@@ -1,0 +1,13 @@
+.control {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2%;
+}
+
+.rover-info {
+    margin-top: 4rem;
+    margin-left: 2%;
+    background-color: blue;
+}
