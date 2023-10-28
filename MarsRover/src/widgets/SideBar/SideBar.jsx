@@ -4,30 +4,11 @@ import { NavLink } from "react-router-dom"
 import { useState } from "react"
 import { useModal } from "../../hooks/useModal"
 import { Modal } from "../../shared/ModalWindow/Modal"
+import { useSideBar } from "../../hooks/useSideBar"
+import { rovers } from "../../mocks/roverMock"
 
-const SideBar = ({ rover, setRover }) => {
+const SideBar = ({ activeIndex, handleGetRover }) => {
     const { open, point, handleOpenModal, handleCloseModal } = useModal();
-    const rovers = [
-        {
-            name: "Rover 1",
-            info: "Info1"
-        },
-        {
-            name: "Rover 2",
-            info: "Info2",
-        },
-        {
-            name: "Rover 3",
-            info: "Info3",
-        },
-    ];
-
-    const [activeIndex, setActiveIndex] = useState(null);
-
-    const handleGetRover = (idx) => {
-        setRover(rovers[idx]);
-        setActiveIndex(idx);
-    }
 
     return (
         <div className="side-bar">
