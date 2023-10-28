@@ -18,6 +18,7 @@ export const useMap = () => {
         for (let x = 0; x < MapSize.width; x += squareSize) {
             for (let y = 0; y < MapSize.height; y += squareSize) {
                 areas.push({
+                    fillColor: "rgba(255, 255, 255, 0.2)",
                     shape: 'rect',
                     coords: [x, y, x + squareSize, y + squareSize],
                 });
