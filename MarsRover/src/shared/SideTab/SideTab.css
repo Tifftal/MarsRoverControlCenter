@@ -1,8 +1,11 @@
 .markersTabHeader {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    height: 10%;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .markersTabHeader h3 {
