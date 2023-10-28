@@ -1,5 +1,8 @@
 import React from "react"
 import './AboutPage.css'
+import ImageMapper from 'react-img-mapper';
+
+
 
 const AboutPage = () => {
     return (
