@@ -15,6 +15,7 @@ export const SideTab = ({ children, header, side, open, setIsOpen, setIsClose })
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
+                margin: "0 5px",
             }}
         >
             <div className="markersTabHeader">
@@ -22,7 +23,7 @@ export const SideTab = ({ children, header, side, open, setIsOpen, setIsClose })
                 <button
                     onClick={open ? setIsClose : setIsOpen}
                 >
-                    {open ? ("Свернуть") : ("Развернуть")}
+                    {open ? (<img src="../../img/свернуть.png"/>) : (<img src="../../img/развернуть.png"/>)}
                 </button>
             </div>
             {!open ? null : (
