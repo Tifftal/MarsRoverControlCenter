@@ -8,7 +8,7 @@
     border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.side-bar button {
+.addBtn {
     cursor: pointer;
     border: none;
     background-color: #df4b4a;
@@ -21,7 +21,7 @@
     margin-bottom: 1rem;
 }
 
-.side-bar button:hover {
+.addBtn:hover {
     background-color: rgb(187, 49, 49);
 }
 
@@ -40,4 +40,20 @@
 
 .active-class {
     background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.side-bar form {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-bar input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 100%;
+    width: 100%;
 }
