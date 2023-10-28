@@ -4,11 +4,9 @@ import { useMap } from '../../hooks/useMap';
 
 
 export const Mapper = ({ handleOpenModal }) => {
-    const { URL, MAP } = useMap();
+    const { URL, MAP, handleShowDescription } = useMap();
 
     return (
-        <div className="ImageMapperContainer">
-            <ImageMapper src={URL} map={MAP} onClick={handleOpenModal} />
-        </div>
+        <ImageMapper src={URL} map={MAP} onClick={handleOpenModal} onMouseEnter={handleShowDescription} />
     )
 }

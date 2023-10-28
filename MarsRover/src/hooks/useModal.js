@@ -7,6 +7,7 @@ export const useModal = () => {
     const handleOpenModal = (point) => {
         console.log(point)
         setPoint(point);
+        console.log(point);
         setOpen(true);
     };
 

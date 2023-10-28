@@ -26,7 +26,8 @@ export const Map = () => {
                         header={point.name}
                         handleClose={handleCloseModal}
                     >
-                        {point.name}
+                        <p>Долгота: {point.coords[0]}</p>
+                        <p>Широта: {point.coords[1]}</p>
                     </Modal>
                 )}
                 <Mapper
