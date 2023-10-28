@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route} from "browser-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
+import MainPage from './pages/MainPage';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<MainPage />} />
       </Routes>
     </BrowserRouter>
   )
