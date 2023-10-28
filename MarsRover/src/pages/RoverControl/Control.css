@@ -9,5 +9,16 @@
 .rover-info {
     margin-top: 4rem;
     margin-left: 2%;
-    background-color: blue;
+}
+
+.rover-info-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rover-info-div p {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }

@@ -12,8 +12,10 @@ const Control = () => {
             <div className="rover-info">
                 {
                     rover && (
-                        <div>
-                            {rover.info}
+                        <div className="rover-info-div">
+                            <p><b>Rover Status:</b> {rover.status}</p>
+                            <p><b>Rover Speed:</b> {rover.speed}</p>
+                            <p><b>Rover Meneuverability:</b> {rover.maneuverability}</p>
                         </div>
                     )
                 }
