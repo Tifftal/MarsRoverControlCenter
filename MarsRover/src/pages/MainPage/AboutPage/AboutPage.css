@@ -1,33 +1,69 @@
-/* .background {
-    width: 100%;
-    height: auto;
-    position: relative;
-    display: inline-block;
-} */
-
+.about {
+    height: 150vh;
+}
 .container {
-    margin: 0;
-    padding: 0;
-    height: 85vh;
-    background-size: contain;
+    position: absolute;
+    width: 501px;
+    height: 501px;
+    border-radius: 99999px;
+    top: 100vh;
+    left: 5vw;
+    border-radius: 501px;
+    /* background-color: red; */
+    background-image: url(../../../img/back.jpg);
     background-repeat: no-repeat;
-    background-position: top;
-    background-image: url(../../../img/marsBackgroundBlack.jpg);
-    margin-top: 15vh;
+    background-size: cover;
+}
+
+svg {
+    position: absolute;
+}
+
+.first {
+    left: 90px;
+}
+
+.second {
+    top: 185px;
+}
+
+.third {
+    top: 297px;
+    left: 200px;
+}
+
+path:hover {
+    fill: red;
+}
+
+path:hover .drop-down {
+    display: block;
 }
 
 .text-overlay {
-    width: 90%;
+    position: absolute;
+    top: -5vh;
+    left: 600px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    margin: 5%;
+    z-index: 999;
+}
+
+.text-overlay-2 {
+    position: absolute;
+    top: 40vh;
+    left: 600px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 999;
 }
 
 .text-info {
-    width: 35rem;
-    background-color: rgba(28, 28, 28, 0.5);
-    padding: 1% 2%;
+    width: 40rem;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 2% 4%;
     border-radius: 10px;
 }
 
@@ -36,3 +72,5 @@
     margin-bottom: 2%;
     font-weight: 800;
 }
+
+
