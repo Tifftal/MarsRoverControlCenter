@@ -6,6 +6,7 @@ import { Map } from './pages/Map/Map';
 import Control from './pages/RoverControl/Control';
 import Navbar from './shared/Navbar/Navbar';
 import SideBar from './widgets/SideBar/SideBar';
+import { Footer } from './pages/MainPage/Footer/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
