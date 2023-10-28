@@ -1,12 +1,13 @@
-export const SideTab = ({ children, header, side }) => {
+import "./SideTab.css";
 
+export const SideTab = ({ children, header, side }) => {
     return (
         <div
             style={{
                 position: "fixed",
                 top: "90px",
                 ...side,
-                width: "20%",
+                width: "15%",
                 height: "80%",
                 backgroundColor: "rgba(0, 0, 0, 0.5)",
                 borderRadius: "10px",
