@@ -1,15 +1,14 @@
 import React from "react"
 import './Control.css'
 import SideBar from "../../widgets/SideBar/SideBar"
-import MainPage from "../MainPage/MainPage"
-import { useState } from "react"
+import { useSideBar } from "../../hooks/useSideBar"
 
 const Control = () => {
-    const [rover, setRover] = useState(null);
+    const { activeIndex, rover, handleGetRover } = useSideBar();
 
     return (
         <div className="control">
-            <SideBar rover={rover} setRover={setRover} />
+            <SideBar activeIndex={activeIndex} handleGetRover={handleGetRover} />
             <div className="rover-info">
                 {
                     rover && (
