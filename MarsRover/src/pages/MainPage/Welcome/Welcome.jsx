@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import './Welcome.css'
 
 const Welcome = () => {
@@ -20,7 +21,7 @@ const Welcome = () => {
                     <h2>Rover has been on Mars for</h2>
                     <p>ndcjdjnddnc</p>
                 </div>
-                <a href='#'><button>Go to rover control</button></a>
+                <NavLink to={'/control'}><button>Go to rover control</button></NavLink>
             </div>
             {/* <div className='welcome-footer'>
                 <div className='welcome-footer-div'>
