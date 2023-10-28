@@ -8,11 +8,13 @@ export const SideTab = ({ children, header, side, open, setIsOpen, setIsClose })
                 top: "90px",
                 ...side,
                 width: "15%",
-                height: "80%",
+                height: open ? "80%" : "50px",
                 backgroundColor: "rgba(0, 0, 0, 0.5)",
                 borderRadius: "10px",
                 zIndex: "99",
                 overflow: "hidden",
+                display: "flex",
+                flexDirection: "column",
             }}
         >
             <div className="markersTabHeader">
