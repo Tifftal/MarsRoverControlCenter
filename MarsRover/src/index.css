@@ -75,7 +75,7 @@ button:focus-visible {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255);
-  background-color: #1c1c1c;
+  background-color: #000000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
