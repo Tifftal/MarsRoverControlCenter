@@ -1,15 +1,15 @@
 export const MarkersTab = () => {
 
-    // Мне надо закрепить этот div в левом верхнем углу карты
     return (
         <div
             style={{
-                position: "absolute",
-                top: "0px",
+                position: "fixed",
+                top: "100px",
                 left: "0px",
                 width: "100px",
                 height: "100px",
                 backgroundColor: "red",
+                zIndex: "99"
             }}
         >
             <h1>MarkersTab</h1>
