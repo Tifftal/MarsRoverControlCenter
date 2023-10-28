@@ -1,0 +1,10 @@
+.sampleCards {
+    margin-top: 3%;
+    height: 400px;
+    margin-bottom: 10%;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
