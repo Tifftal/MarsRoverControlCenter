@@ -1,0 +1,58 @@
+import { MapSize } from "../config/config"
+
+export const points = [
+    {
+        name: "угольная руда",
+        shape: "circle",
+        coords: [1098, 123, 20],
+        preFillColor: "rgba(255, 255, 255, 0.5)",
+        fillColor: "rgba(255, 255, 255, 0.5)",
+        strokeColor: "rgba(255, 255, 255, 0.5)",
+        lineWidth: 1,
+    },
+    {
+        name: "железная руда",
+        shape: "circle",
+        coords: [3948, 234, 20],
+        preFillColor: "rgba(255, 255, 255, 0.5)",
+        fillColor: "rgba(255, 255, 255, 0.5)",
+        strokeColor: "rgba(255, 255, 255, 0.5)",
+        lineWidth: 1,
+    },
+    {
+        name: "песок",
+        shape: "circle",
+        coords: [1028, 1034, 20],
+        preFillColor: "rgba(255, 255, 255, 0.5)",
+        fillColor: "rgba(255, 255, 255, 0.5)",
+        strokeColor: "rgba(255, 255, 255, 0.5)",
+        lineWidth: 1,
+    },
+    {
+        name: "органика",
+        shape: "circle",
+        coords: [3123, 1212, 20],
+        preFillColor: "rgba(255, 255, 255, 0.5)",
+        fillColor: "rgba(255, 255, 255, 0.5)",
+        strokeColor: "rgba(255, 255, 255, 0.5)",
+        lineWidth: 1,
+    },
+    {
+        name: "угольная руда",
+        shape: "circle",
+        coords: [1111, 1111, 20],
+        preFillColor: "rgba(255, 255, 255, 0.5)",
+        fillColor: "rgba(255, 255, 255, 0.5)",
+        strokeColor: "rgba(255, 255, 255, 0.5)",
+        lineWidth: 1,
+    },
+    {
+        name: "base",
+        shape: "circle",
+        coords: [MapSize.width / 2, MapSize.height / 2, 20],
+        preFillColor: "rgba(255, 255, 255, 0.5)",
+        fillColor: "rgba(255, 255, 255, 0.5)",
+        strokeColor: "rgba(255, 255, 255, 0.5)",
+        lineWidth: 1,
+    },
+]
