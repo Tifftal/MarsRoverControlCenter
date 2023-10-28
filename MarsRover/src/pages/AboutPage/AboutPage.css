@@ -6,10 +6,12 @@
 }
 
 .text-overlay {
-    max-width: 700px;
+    width: 50%;
     position: absolute;
-    top: 100px;
-    right: 50px;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    right: 1%;
     background-color: #1c1c1c;
     padding: 20px;
     border-radius: 5px;
