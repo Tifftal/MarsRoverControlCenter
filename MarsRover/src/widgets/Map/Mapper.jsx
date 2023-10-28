@@ -21,5 +21,9 @@ export const Mapper = props => {
         ]
     };
 
-    return <ImageMapper src={URL} map={MAP} />
+    return (
+        <div className="ImageMapperContainer">
+            <ImageMapper src={URL} map={MAP} />
+        </div>
+    )
 }
