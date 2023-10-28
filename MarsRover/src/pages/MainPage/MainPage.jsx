@@ -3,9 +3,8 @@ import './MainPage.css'
 
 const MainPage = () => {
     return (
-        <div>
-            Main Page
-            <img src=''/>
+        <div className='main'>
+            <h1>Mars Rover</h1>
         </div>
     )
 }

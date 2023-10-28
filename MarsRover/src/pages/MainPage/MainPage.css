@@ -1,0 +1,16 @@
+.main{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(../../img/PIA22107.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.main h1 {
+    font-size: 500%;
+    padding: 5%;
+    margin: 0;
+    text-transform: uppercase;
+}
