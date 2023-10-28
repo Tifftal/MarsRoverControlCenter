@@ -84,7 +84,7 @@ button:focus-visible {
   -webkit-text-size-adjust: 100%;
 }
 
-body, :root, #root {
-  padding: 0;
+*{
   margin: 0;
+  padding: 0;
 }
