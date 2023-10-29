@@ -1,5 +1,5 @@
 .about {
-    height: 100vh;
+    height: 80vh;
 }
 .container {
     position: absolute;
@@ -15,7 +15,7 @@
     background-size: cover;
 }
 
-svg {
+.first, .second, .third {
     position: absolute;
 }
 
@@ -32,12 +32,8 @@ svg {
     left: 200px;
 }
 
-path:hover {
+.first path:hover, .second path:hover, .third path:hover {
     fill: red;
-}
-
-path:hover .drop-down {
-    display: block;
 }
 
 .text-overlay {

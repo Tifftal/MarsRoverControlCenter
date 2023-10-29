@@ -1,4 +1,5 @@
 .side-bar {
+    height: 35vh;
     width: 15rem;
     /* background-color: green; */
     display: flex;
@@ -11,7 +12,7 @@
 .addBtn {
     cursor: pointer;
     border: none;
-    background-color: #df4b4a;
+    background-color: #2E8B57;
     height: 2rem;
     border-radius: 15px;
     transition: .3s;
@@ -22,10 +23,13 @@
 }
 
 .addBtn:hover {
-    background-color: rgb(187, 49, 49);
+    background-color: #1a6f3f;
 }
 
 .side-bar-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 110%;
     font-weight: 500;
     cursor: pointer;
@@ -63,15 +67,35 @@
     margin-top: 5%;
     cursor: pointer;
     border: none;
-    background-color: rgb(252, 208, 152);
+    background-color: #2E8B57;
     height: 2rem;
     border-radius: 15px;
     transition: .3s;
-    color: black;
+    color: white;
     font-size: 110%;
     font-weight: 800;
 }
 
 .submit:hover {
-    background-color: rgb(247, 193, 123);
+    background-color: #1a6f3f;
+}
+
+.non-active-class button {
+    display: none;
+}
+
+.side-bar-link button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.side-bar-link button img {
+    width: 20px;
+    height: 20px;
+    transition: .2s;
+}
+
+.side-bar-link button img:hover {
+    transform: scale(1.1);
 }

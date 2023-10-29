@@ -31,7 +31,7 @@ const SideBar = ({ activeIndex, handleGetRover }) => {
             )}
             <button className="addBtn" onClick={() => { handleOpenModal() }}>+ Add Rover</button>
             {rovers.map((rover, idx) => (
-                <p className={idx === activeIndex ? "active-class side-bar-link" : "non-active-class side-bar-link"} onClick={() => { handleGetRover(idx) }} key={idx}>{rover.name}</p>
+                <p className={idx === activeIndex ? "active-class side-bar-link" : "non-active-class side-bar-link"} onClick={() => { handleGetRover(idx) }} key={idx}>{rover.name} <button><img src="../../img/icons8-редактировать-96.png"/></button></p>
             ))}
         </div>
     )
