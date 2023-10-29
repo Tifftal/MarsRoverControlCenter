@@ -7,10 +7,11 @@ import { Mapper } from "../../widgets/Map/Mapper";
 import { MapWrapper } from "../../widgets/MapWrapper/MapWrapper";
 import { useHookTab } from "../../hooks/useHookTab";
 import { useSideBar } from "../../hooks/useSideBar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { RoverController } from "../../widgets/RoverController/RoverController";
 import { useRoverHsitory } from "../../hooks/useRoverHistory";
+import { Popup } from "../../shared/PopupMission/Popup";
 
 export const Map = () => {
     const { open, point, handleOpenModal, handleCloseModal } = useModal();
@@ -101,6 +102,7 @@ export const Map = () => {
                         </Tabs>
                     ))}
                 </SideTab>
+                
                 {open && (
                     <Modal
                         header={point.name}

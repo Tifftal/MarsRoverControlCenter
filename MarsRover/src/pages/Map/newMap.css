@@ -1,0 +1,6 @@
+.map {
+    width: 100vw;
+    height: 90vh;
+    background-image: url(../../img/PIA24096.jpeg);
+    background-size: cover;
+}

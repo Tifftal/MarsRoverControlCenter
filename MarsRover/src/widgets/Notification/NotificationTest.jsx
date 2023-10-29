@@ -20,7 +20,7 @@ function App() {
     return (
         <div className="App">
             <h1>Уведомления</h1>
-            <button onClick={() => createNotification("да да да это уведомление. чел уже на марсе.")}>Уведомление</button>
+            <button onClick={() => createNotification("Mission complete! Click to show details")}>Уведомление</button>
             {notifications.map(({ id, message }) => (
                 <Notification key={id} message={message} onDelete={() => deleteNotification(id)} />
             ))}
