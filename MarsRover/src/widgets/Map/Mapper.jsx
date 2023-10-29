@@ -13,11 +13,17 @@ export const Mapper = ({ handleOpenModal }) => {
 
     const onConnected = () => { // подключаемся)))
         console.log('WS connected');
-        stompClient.subscribe('/rover/test', getData);
-        stompClient.subscribe('/rover/landStatus', getData);
+
+        stompClient.subscribe('/rover/statusInfo', getStatusInfo);
+        stompClient.subscribe('/rover/movementHistory', getMovementHistory)
     };
 
-    const getData = (payload) => {
+    const getStatusInfo = (payload) => {
+        const data = JSON.parse(payload.body);
+        console.log(data);
+    }
+
+    const getMovementHistory = (payload) => {
         const data = JSON.parse(payload.body);
         console.log(data);
     }
@@ -29,13 +35,6 @@ export const Mapper = ({ handleOpenModal }) => {
     useEffect(() => {
         stompClient = over(new SockJS('http://localhost:8082/api/ws'));
         stompClient.connect({}, onConnected, onError);
-        axios.get('http://localhost:8082/api/rover/landStatus')
-            .then(response => {
-                console.log(response);
-            })
-            .catch(error => {
-                console.log(error);
-            })
     }, []);
 
     return (
