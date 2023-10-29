@@ -7,7 +7,7 @@ import { over } from 'stompjs';
 import axios from 'axios';
 
 export const Mapper = ({ handleOpenModal }) => {
-    const { URL, MAP, handleShowDescription } = useMap();
+    const { URL, MAP, rovers, setRovers, generateRovers } = useMap(); // Добавлено setRovers
 
     let stompClient = useRef(null);
 
@@ -15,22 +15,29 @@ export const Mapper = ({ handleOpenModal }) => {
         console.log('WS connected');
 
         stompClient.subscribe('/rover/statusInfo', getStatusInfo);
-        stompClient.subscribe('/rover/movementHistory', getMovementHistory)
+        stompClient.subscribe('/rover/movementHistory', getMovementHistory);
     };
 
     const getStatusInfo = (payload) => {
         const data = JSON.parse(payload.body);
         console.log(data);
-    }
+    };
 
     const getMovementHistory = (payload) => {
         const data = JSON.parse(payload.body);
-        console.log(data);
-    }
+        generateRovers(data);
+    };
 
     const onError = () => {
         console.log('WS error');
     };
+
+    useEffect(() => {
+        const newMap = MAP; // Используем MAP из useMap
+        newMap.areas = rovers;
+        console.log("entered");
+        setRovers(newMap.areas); // Обновляем rovers внутри Mapper
+    }, [stompClient]);
 
     useEffect(() => {
         stompClient = over(new SockJS('http://localhost:8082/api/ws'));
@@ -40,9 +47,9 @@ export const Mapper = ({ handleOpenModal }) => {
     return (
         <ImageMapper
             src={URL}
-            map={MAP}
+            map={MAP} // Используем MAP из useMap
+            // width={1500} imgWidth={4000}
             onClick={handleOpenModal}
-            onMouseEnter={handleShowDescription}
         />
-    )
-}
+    );
+};

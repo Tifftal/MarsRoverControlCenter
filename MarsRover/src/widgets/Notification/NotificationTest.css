@@ -1,0 +1,13 @@
+/* App.css */
+.App {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
