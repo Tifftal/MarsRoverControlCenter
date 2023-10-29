@@ -23,7 +23,7 @@ function Notification({ message, onDelete }) {
 
     return (
         <div className={`notification ${isClosing ? "closing" : "opening"}`}>
-            <div className="textNtfy">{message}</div>
+            <button className="textNtfy">{message}</button>
             <button className="closeBtn" onClick={closeNotification}>close</button>
         </div>
     );
