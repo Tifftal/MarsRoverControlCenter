@@ -1,11 +1,9 @@
 import axios from 'axios';
+import { serverURI } from '../config/config';
 
 const api = axios.create({
-    baseURL: 'https://api.example.com',
-    timeout: 5000,
-    headers: {
-        'Content-Type': 'application/json',
-    },
+    baseURL: serverURI,
+    withCredentials: true,
 });
 
 api.interceptors.request.use((req) => {
@@ -13,11 +11,7 @@ api.interceptors.request.use((req) => {
         ...req,
         baseURL: serverURI,
         withCredentials: true,
-        headers: {
-            ...req.headers,
-            'Content-Type': 'application/json',
-        },
-    }
+    };
 });
 
 export default api;

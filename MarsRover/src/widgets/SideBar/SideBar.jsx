@@ -8,7 +8,8 @@ import { useSideBar } from "../../hooks/useSideBar"
 import { rovers } from "../../mocks/roverMock"
 
 const SideBar = ({ activeIndex, handleGetRover }) => {
-    const { open, handleOpenModal, handleCloseModal, handleSubmitForm } = useModal();
+    const { open, handleOpenModal, handleCloseModal } = useModal();
+    const { handleSubmitForm, response } = useSideBar();
 
     return (
         <div className="side-bar">
@@ -18,11 +19,12 @@ const SideBar = ({ activeIndex, handleGetRover }) => {
                     header={"Add Rover"}
                     handleClose={handleCloseModal}
                 >
-                    <form onSubmit={() => {handleSubmitForm(e)}}>
-                        <input type="text" placeholder="Name" id="Name"/>
-                        <input type="text" placeholder="Maneuverability" id="Maneuverability"/>
-                        <input type="text" placeholder="Speed" id="Speed"/>
+                    <form onSubmit={(e) => {handleSubmitForm(e, handleCloseModal)}}>
+                        <input type="text" placeholder="Name" id="Name" required/>
+                        <input type="text" placeholder="Maneuverability" id="Maneuverability" required/>
+                        <input type="text" placeholder="Speed" id="Speed" required/>
                         {/* <input type="text" placeholder="Fuel" /> */}
+                        {response === "" ? (null) : (response)}
                         <button className="submit" type="submit">Send</button>
                     </form>
                 </Modal>

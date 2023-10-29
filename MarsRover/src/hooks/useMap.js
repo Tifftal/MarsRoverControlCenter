@@ -5,7 +5,7 @@ import { points } from "../mocks/mapMock";
 export const useMap = () => {
 
     const createSectors = (existingPoints) => {
-        const squareSize = 100;
+        const squareSize = 200;
         const areas = [];
 
         existingPoints.forEach((point) => {
