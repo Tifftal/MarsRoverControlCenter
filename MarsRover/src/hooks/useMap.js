@@ -4,14 +4,15 @@ import { points } from "../mocks/mapMock";
 import { useEffect, useState } from "react";
 
 export const useMap = () => {
-    const [rovers, setRovers] = useState([]);
+    const [rovers, setAllRovers] = useState([]);
+    const [cur, setCur] = useState([0, 0, 0]);
 
     const generateRovers = (data) => {
         const rover = {
             id: data.roverId,
             name: "rover",
             shape: "circle",
-            coords: [data.x * 200, data.y * 200, 20],
+            coords: [Math.round(data.x) * 5, Math.round(data.y)* 5, 20],
             preFillColor: "rgba(255, 102, 0, 0.5)",
             fillColor: "rgba(255, 102, 0, 0.5)",
             strokeColor: "rgba(255, 102, 0, 0.5)",
@@ -39,12 +40,8 @@ export const useMap = () => {
             }
         }
 
-        console.log(rovers);
-        MAP = {
-            areas: rovers,
-        }
+        setCur(rover.coords);
     }
-
 
     const URL = '/PIA24096.jpeg';
     const MAP = {
@@ -53,6 +50,8 @@ export const useMap = () => {
         center: [1098, 123],
     };
 
+    const [map, setMap] = useState(MAP);
+
     const handleShowDescription = (area) => {
         console.log(area);
     }
@@ -60,9 +59,12 @@ export const useMap = () => {
     return {
         URL,
         MAP,
+        map,
+        setMap,
         rovers,
         handleShowDescription,
         generateRovers,
-        setRovers,
+        setAllRovers,
+        cur
     }
 }

@@ -167,19 +167,62 @@ export const Map = () => {
                                 <>
                                     <form onSubmit={(e) => {
                                         handleSendToOperation(e, rover.id);
-                                    }}>
-                                        <input type="text" placeholder="Longitude" id="longitude"></input>
-                                        <input type="text" placeholder="Latitude" id="latitude"></input>
+                                    }}
+                                        style={{
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            height: "300px",
+                                        }}
+                                    >
+                                        <input type="text" placeholder="Longitude" id="longitude"
+                                        style={{
+                                            width: "100%",
+                                            height: "50px",
+                                            marginBottom: "10px",   
+                                        }}
+                                        ></input>
+                                        <input type="text" placeholder="Latitude" id="latitude"
+                                        style={{
+                                            width: "100%",
+                                            height: "50px",
+                                            marginBottom: "10px",   
+                                        }}
+                                        ></input>
                                         <button type="submit">Send</button>
                                     </form>
                                     <form onSubmit={(e) => {
                                         handleMoveRover(e, rover.id)
-                                    }}>
-                                        <select placeholder="COMMAND" id="command">
+                                    }}
+                                    style={{
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        marginLeft: "10px"
+                                    }}
+                                    >
+                                        <select placeholder="COMMAND" id="command"
+                                        style={{
+                                            width: "100px",
+                                            height: "50px",
+                                            marginBottom: "10px",   
+                                        }}
+                                        
+                                        >
                                             <option>MOVE</option>
                                         </select>
-                                        <input placeholder="Longitude" id="MoveToX"></input>
-                                        <input placeholder="Latitude" id="MoveToY"></input>
+                                        <input placeholder="Longitude" id="MoveToX"
+                                        style={{
+                                            width: "100px",
+                                            height: "50px",
+                                            marginBottom: "10px",   
+                                        }}
+                                        ></input>
+                                        <input placeholder="Latitude" id="MoveToY"
+                                        style={{
+                                            width: "100px",
+                                            height: "50px",
+                                            marginBottom: "10px",   
+                                        }}
+                                        ></input>
                                         <button>Send</button>
                                     </form>
                                 </>
