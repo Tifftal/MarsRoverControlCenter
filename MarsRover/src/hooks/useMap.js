@@ -12,9 +12,9 @@ export const useMap = () => {
             name: "rover",
             shape: "circle",
             coords: [data.x, data.y, 20],
-            preFillColor: "rgba(255, 255, 255, 0.5)",
-            fillColor: "rgba(255, 255, 255, 0.5)",
-            strokeColor: "rgba(255, 255, 255, 0.5)",
+            preFillColor: "rgba(255, 102, 0, 0.5)",
+            fillColor: "rgba(255, 102, 0, 0.5)",
+            strokeColor: "rgba(255, 102, 0, 0.5)",
             lineWidth: 1,
         };
 
@@ -45,14 +45,14 @@ export const useMap = () => {
         }
     }
 
-    
+
     const URL = '/PIA24096.jpeg';
     const MAP = {
         name: 'Mars Map',
         areas: rovers,
         center: [1098, 123],
     };
-    
+
     const handleShowDescription = (area) => {
         console.log(area);
     }
@@ -63,6 +63,6 @@ export const useMap = () => {
         rovers,
         handleShowDescription,
         generateRovers,
-        setRovers
+        setRovers,
     }
 }
