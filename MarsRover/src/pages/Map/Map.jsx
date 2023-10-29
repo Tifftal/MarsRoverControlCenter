@@ -7,10 +7,11 @@ import { Mapper } from "../../widgets/Map/Mapper";
 import { MapWrapper } from "../../widgets/MapWrapper/MapWrapper";
 import { useHookTab } from "../../hooks/useHookTab";
 import { useSideBar } from "../../hooks/useSideBar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { RoverController } from "../../widgets/RoverController/RoverController";
 import { useRoverHsitory } from "../../hooks/useRoverHistory";
+import { Popup } from "../../shared/PopupMission/Popup";
 
 export const Map = () => {
     const { open, point, handleOpenModal, handleCloseModal } = useModal();
@@ -65,12 +66,37 @@ export const Map = () => {
         };
 
         axios.post(`http://localhost:8082/api/rover/${id}/commands`, data)
-        .then(response => {
-            console.log(response);
-        }).catch(error => {
-            console.log(error);
-        })
+            .then(response => {
+                console.log(response);
+            }).catch(error => {
+                console.log(error);
+            })
     }
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const HandleOpenNote = () => {
+        setIsOpen(true)
+    };
+
+    const HandleCloseNote = () => {
+        setIsOpen(false)
+    };
+
+    const model = {
+        id: 5,
+        x: 1.77,
+        y: 1.77,
+        obstacleTraverseCoefficient: 1.77,
+        roubion: 1.77,
+        montdenier: 1.77,
+        montagnac: 1.77,
+        salette: 1.77,
+        robine: 1.77,
+        swiftRun: 1.77,
+        crosswindLake: 1.77,
+        roverId: 5,
+    };
 
     return (
         <>
@@ -101,6 +127,44 @@ export const Map = () => {
                         </Tabs>
                     ))}
                 </SideTab>
+                {isOpen && (
+                    <Popup onClose={HandleCloseNote} setIsOpen={setIsOpen}>
+                        <div>
+                            {/* Popup
+                            <p>{model.id}</p> */}
+                            <h4>Coordinates where the check took place</h4>
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                alignItems: "center",
+                                gap: "10%",
+                            }}>
+                                <p>x: {model.x}</p>
+                                <p>y: {model.y}</p>
+                            </div>
+
+                            <h4 style={{
+                                marginTop: "2%",
+                            }}>
+                                ObstacleTraverseCoefficient</h4>
+                            <p>{model.obstacleTraverseCoefficient}</p>
+
+                            <h4 style={{
+                                marginTop: "2%",
+                            }}>
+                                Rocks discovered:</h4>
+                            <p>Roubion: {model.roubion}%</p>
+                            <p>Montdenier: {model.montdenier}%</p>
+                            <p>Montagnac: {model.montagnac}%</p>
+                            <p>Salette: {model.salette}%</p>
+                            <p>Robine: {model.robine}%</p>
+                            <p>SwiftRun: {model.swiftRun}%</p>
+                            <p>CrosswindLake: {model.crosswindLake}%</p>
+                            {/* <p>{model.roverId}</p> */}
+                        </div>
+                    </Popup>
+                )}
+                <button onClick={HandleOpenNote}>Popup</button>
                 {open && (
                     <Modal
                         header={point.name}
@@ -165,7 +229,7 @@ export const Map = () => {
                                 }}
                             >
                                 {rover.sendToOperationDate === null ?
-                                    (   <>
+                                    (<>
                                         <form onSubmit={(e) => {
                                             handleSendToOperation(e, rover.id);
                                         }}>
@@ -183,8 +247,8 @@ export const Map = () => {
                                             <input placeholder="Latitude" id="MoveToY"></input>
                                             <button>Send</button>
                                         </form>
-                                        </>
-                                        
+                                    </>
+
                                     )
                                     :
                                     (
