@@ -11,7 +11,7 @@ export const useMap = () => {
             id: data.roverId,
             name: "rover",
             shape: "circle",
-            coords: [data.x, data.y, 20],
+            coords: [data.x * 200, data.y * 200, 20],
             preFillColor: "rgba(255, 102, 0, 0.5)",
             fillColor: "rgba(255, 102, 0, 0.5)",
             strokeColor: "rgba(255, 102, 0, 0.5)",

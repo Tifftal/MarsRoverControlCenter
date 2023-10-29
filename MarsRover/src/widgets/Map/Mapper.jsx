@@ -48,7 +48,7 @@ export const Mapper = ({ handleOpenModal }) => {
         <ImageMapper
             src={URL}
             map={MAP} // Используем MAP из useMap
-            width={1500} imgWidth={4000}
+            // width={1500} imgWidth={4000}
             onClick={handleOpenModal}
         />
     );
