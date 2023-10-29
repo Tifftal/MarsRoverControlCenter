@@ -1,10 +1,20 @@
 .sampleCards {
     margin-top: 3%;
-    height: 400px;
     margin-bottom: 10%;
-    padding: 2%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    display: inline-block;
+    width: 1440px;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
+
+.scroll-comp {
+    width: 1800px;
+}
+
+.scroll-comp svg {
+    margin: 0 0.7%;
+}
+
+.sampleCards::-webkit-scrollbar {
+    width: 0;
+  }
