@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { rovers } from "../mocks/roverMock";
+// import { rovers } from "../mocks/roverMock";
 import api from "../api";
 import axios from "axios";
 
 export const useSideBar = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const [rover, setRover] = useState(null);
+    const [rovers, setRovers] = useState(null);
     const [response, setResponse] = useState("");
 
     const handleGetRover = (idx) => {
@@ -41,6 +42,8 @@ export const useSideBar = () => {
         setActiveIndex,
         rover,
         setRover,
+        rovers,
+        setRovers,
         handleGetRover,
         handleSubmitForm
     }

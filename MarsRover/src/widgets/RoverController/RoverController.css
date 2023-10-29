@@ -1,0 +1,8 @@
+.rover-controller-container {
+    height: 350px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
