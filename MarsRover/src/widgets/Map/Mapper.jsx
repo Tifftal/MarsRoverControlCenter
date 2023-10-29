@@ -42,7 +42,6 @@ export const Mapper = ({ handleOpenModal }) => {
             src={URL}
             map={MAP}
             onClick={handleOpenModal}
-            onMouseEnter={handleShowDescription}
         />
     )
 }

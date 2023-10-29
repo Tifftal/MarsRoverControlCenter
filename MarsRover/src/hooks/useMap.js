@@ -25,9 +25,6 @@ export const useMap = () => {
             }
         }
 
-
-        console.log(areas);
-
         return areas;
     }
 

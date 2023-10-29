@@ -65,11 +65,11 @@ export const Map = () => {
         };
 
         axios.post(`http://localhost:8082/api/rover/${id}/commands`, data)
-        .then(response => {
-            console.log(response);
-        }).catch(error => {
-            console.log(error);
-        })
+            .then(response => {
+                console.log(response);
+            }).catch(error => {
+                console.log(error);
+            })
     }
 
     return (
@@ -164,42 +164,25 @@ export const Map = () => {
                                     width: "20%",
                                 }}
                             >
-                                {rover.sendToOperationDate === null ?
-                                    (   <>
-                                        <form onSubmit={(e) => {
-                                            handleSendToOperation(e, rover.id);
-                                        }}>
-                                            <input type="text" placeholder="Longitude" id="longitude"></input>
-                                            <input type="text" placeholder="Latitude" id="latitude"></input>
-                                            <button type="submit">Send</button>
-                                        </form>
-                                        <form onSubmit={(e) => {
-                                            handleMoveRover(e, rover.id)
-                                        }}>
-                                            <select placeholder="COMMAND" id="command">
-                                                <option>MOVE</option>
-                                            </select>
-                                            <input placeholder="Longitude" id="MoveToX"></input>
-                                            <input placeholder="Latitude" id="MoveToY"></input>
-                                            <button>Send</button>
-                                        </form>
-                                        </>
-                                        
-                                    )
-                                    :
-                                    (
-                                        <form onSubmit={(e) => {
-                                            handleMoveRover(e, rover.id)
-                                        }}>
-                                            <select placeholder="COMMAND" id="command">
-                                                <option>MOVE</option>
-                                            </select>
-                                            <input placeholder="Longitude" id="MoveToX"></input>
-                                            <input placeholder="Latitude" id="MoveToY"></input>
-                                            <button>Send</button>
-                                        </form>
-                                    )
-                                }
+                                <>
+                                    <form onSubmit={(e) => {
+                                        handleSendToOperation(e, rover.id);
+                                    }}>
+                                        <input type="text" placeholder="Longitude" id="longitude"></input>
+                                        <input type="text" placeholder="Latitude" id="latitude"></input>
+                                        <button type="submit">Send</button>
+                                    </form>
+                                    <form onSubmit={(e) => {
+                                        handleMoveRover(e, rover.id)
+                                    }}>
+                                        <select placeholder="COMMAND" id="command">
+                                            <option>MOVE</option>
+                                        </select>
+                                        <input placeholder="Longitude" id="MoveToX"></input>
+                                        <input placeholder="Latitude" id="MoveToY"></input>
+                                        <button>Send</button>
+                                    </form>
+                                </>
                             </div>
                         </div>
                     )}
