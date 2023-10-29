@@ -12,15 +12,15 @@ function Notification({ message, onDelete }) {
         }, 300);
     };
 
-    useEffect(() => {
-        if (!isClosing) {
-            const timeoutId = setTimeout(closeNotification, 5000);
+    // useEffect(() => {
+    //     if (!isClosing) {
+    //         const timeoutId = setTimeout(closeNotification, 5000);
 
-            return () => {
-                clearTimeout(timeoutId);
-            };
-        }
-    }, [isClosing]);
+    //         return () => {
+    //             clearTimeout(timeoutId);
+    //         };
+    //     }
+    // }, [isClosing]);
 
     const [isOpen, setIsOpen] = useState(false);
 
