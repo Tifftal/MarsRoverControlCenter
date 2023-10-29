@@ -6,6 +6,7 @@ import { Map } from './pages/Map/Map';
 import Control from './pages/RoverControl/Control';
 import Navbar from './shared/Navbar/Navbar';
 import NotificationTest from './widgets/Notification/NotificationTest';
+import { NewMap } from './pages/Map/NewMap';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/map" element={<Map />} />
+        <Route path="/newmap" element={<NewMap />} />
         <Route path="/control" element={<Control />} />
         <Route path="/notification" element={<NotificationTest />} />
       </Routes>
