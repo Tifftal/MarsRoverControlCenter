@@ -153,14 +153,20 @@ export const Map = () => {
                                 marginTop: "2%",
                             }}>
                                 Rocks discovered:</h4>
-                            <p>Roubion: {model.roubion}%</p>
-                            <p>Montdenier: {model.montdenier}%</p>
-                            <p>Montagnac: {model.montagnac}%</p>
-                            <p>Salette: {model.salette}%</p>
-                            <p>Robine: {model.robine}%</p>
-                            <p>SwiftRun: {model.swiftRun}%</p>
-                            <p>CrosswindLake: {model.crosswindLake}%</p>
-                            {/* <p>{model.roverId}</p> */}
+                            <div style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(2, 1fr)',
+                                gap: '2%',
+                            }}>
+                                <p>Roubion: {model.roubion}%</p>
+                                <p>Montdenier: {model.montdenier}%</p>
+                                <p>Montagnac: {model.montagnac}%</p>
+                                <p>Salette: {model.salette}%</p>
+                                <p>Robine: {model.robine}%</p>
+                                <p>SwiftRun: {model.swiftRun}%</p>
+                                <p>CrosswindLake: {model.crosswindLake}%</p>
+                                {/* <p>{model.roverId}</p> */}
+                            </div>
                         </div>
                     </Popup>
                 )}
