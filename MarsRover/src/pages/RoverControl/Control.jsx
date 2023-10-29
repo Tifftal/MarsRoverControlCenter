@@ -1,8 +1,9 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import './Control.css'
 import SideBar from "../../widgets/SideBar/SideBar"
 import { useSideBar } from "../../hooks/useSideBar"
 import axios from "axios"
+import { Popup } from "../../shared/PopupMission/Popup"
 
 const Control = () => {
     const { activeIndex, rover, handleGetRover, setRovers, rovers } = useSideBar();
@@ -10,13 +11,13 @@ const Control = () => {
     useEffect(() => {
         (
             axios.get('http://localhost:8082/api/rover/')
-            .then(response => {
-                console.log(response.data);
-                setRovers(response.data);
-            })
-            .catch(error => {
-                console.log(error);
-            })
+                .then(response => {
+                    console.log(response.data);
+                    setRovers(response.data);
+                })
+                .catch(error => {
+                    console.log(error);
+                })
         )
     }, [])
 
