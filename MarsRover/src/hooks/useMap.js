@@ -14,7 +14,7 @@ export const useMap = () => {
             });
         });
 
-        
+
         for (let x = 0; x < MapSize.width; x += squareSize) {
             for (let y = 0; y < MapSize.height; y += squareSize) {
                 areas.push({
@@ -35,6 +35,7 @@ export const useMap = () => {
     const MAP = {
         name: 'Mars Map',
         areas: createSectors(points),
+        center: [1098, 123],
     };
 
     const handleShowDescription = (area) => {

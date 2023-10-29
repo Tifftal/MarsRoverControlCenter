@@ -1,7 +1,8 @@
 .welcome {
     margin: 0;
     padding: 0;
-    height: 85vh;
+    height: 100vh;
+    /* было 85vh */
     background-image: url(../../img/PIA22107.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -100,6 +101,7 @@
     justify-content: center;
     cursor: pointer;
 }
+
 .welcome-footer-div img {
     width: 8rem;
     height: 8rem;

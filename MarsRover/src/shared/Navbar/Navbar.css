@@ -1,4 +1,6 @@
-.navbar{
+.navbar {
+    position: sticky;
+    Top: 0;
     z-index: 100;
     width: 90%;
     display: flex;

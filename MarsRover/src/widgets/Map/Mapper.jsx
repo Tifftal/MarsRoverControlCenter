@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ImageMapper from 'react-img-mapper';
 import { useMap } from '../../hooks/useMap';
 
@@ -39,6 +39,11 @@ export const Mapper = ({ handleOpenModal }) => {
     }, []);
 
     return (
-        <ImageMapper src={URL} map={MAP} onClick={handleOpenModal} onMouseEnter={handleShowDescription} />
+        <ImageMapper
+            src={URL}
+            map={MAP}
+            onClick={handleOpenModal}
+            onMouseEnter={handleShowDescription}
+        />
     )
 }
