@@ -1,40 +1,58 @@
 
 import { MapSize } from "../config/config";
 import { points } from "../mocks/mapMock";
+import { useEffect, useState } from "react";
 
 export const useMap = () => {
+    const [rovers, setRovers] = useState([]);
 
-    const createSectors = (existingPoints) => {
-        const squareSize = 200;
-        const areas = [];
+    const generateRovers = (data) => {
+        const rover = {
+            id: data.roverId,
+            name: "rover",
+            shape: "circle",
+            coords: [data.x, data.y, 20],
+            preFillColor: "rgba(255, 255, 255, 0.5)",
+            fillColor: "rgba(255, 255, 255, 0.5)",
+            strokeColor: "rgba(255, 255, 255, 0.5)",
+            lineWidth: 1,
+        };
 
-        existingPoints.forEach((point) => {
-            areas.push({
-                ...point
-            });
-        });
-
-
-        for (let x = 0; x < MapSize.width; x += squareSize) {
-            for (let y = 0; y < MapSize.height; y += squareSize) {
-                areas.push({
-                    fillColor: "rgba(255, 255, 255, 0.2)",
-                    shape: 'rect',
-                    coords: [x, y, x + squareSize, y + squareSize],
-                });
+        if (rovers.length === 0) {
+            const newRovers = rovers;
+            newRovers.push(rover);
+            setRovers(newRovers);
+        } else {
+            let flag = false;
+            for (let i = 0; i < rovers.length; i++) {
+                if (rovers[i].id === rover.id) {
+                    const newRovers = rovers;
+                    newRovers[i].coords = rover.coords;
+                    setRovers(newRovers);
+                    flag = true;
+                }
+            }
+            if (!flag) {
+                const newRovers = rovers;
+                newRovers.push(rover);
+                setRovers(newRovers);
             }
         }
 
-        return areas;
+        console.log(rovers);
+        MAP = {
+            areas: rovers,
+        }
     }
 
+    
     const URL = '/PIA24096.jpeg';
     const MAP = {
         name: 'Mars Map',
-        areas: createSectors(points),
+        areas: rovers,
         center: [1098, 123],
     };
-
+    
     const handleShowDescription = (area) => {
         console.log(area);
     }
@@ -42,6 +60,9 @@ export const useMap = () => {
     return {
         URL,
         MAP,
+        rovers,
         handleShowDescription,
+        generateRovers,
+        setRovers
     }
 }
