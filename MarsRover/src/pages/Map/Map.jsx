@@ -33,6 +33,15 @@ export const Map = () => {
         axios.post(`http://localhost:8082/api/rover/${id}`)
     }
 
+    const handleSendToOperation = (e) => {
+        e.preventDefault();
+
+        const longitude = Number(document.getElementById("Longitude").value);
+        const latitude = Number(document.getElementById("Latitude").value);
+
+        // axios.post(`http://localhost:8082/api/rover`)
+    }
+
     return (
         <>
             <MapWrapper>
@@ -109,8 +118,12 @@ export const Map = () => {
                             >
                                 {rover.sendToOperationDate === null ?
                                     (
-                                        <form>
-                                            
+                                        <form onSubmit={(e) => {
+                                            handleSendToOperation(e);
+                                        }}>
+                                            <input type="text" placeholder="Longitude" id="latitude"></input>
+                                            <input type="text" placeholder="Latitude" id="latidiute"></input>
+                                            <button type="submit">Send</button>
                                         </form>
                                     )
                                     :
